@@ -3,33 +3,76 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--font-->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <!--css-->
+  <link rel="stylesheet" href="css/style.css">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
   <title>Todo app</title>
-
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
+  <figure class="bg-img">
+  </figure>
 
-  Todo
+  <main class="container">
+    <header class="container__header">
+      <h1>TODO</h1>
+      <div class="toggle"></div>
+    </header>
 
-  <!-- Add dynamic number --> items left
-
-  All
-  Active 
-  Completed
-
-  Clear Completed
-
-  Drag and drop to reorder list
+    <section class="container__section">
+      <div class="todo-item border-radius" id="input-typer">
+        <div class="list-circle"></div>
+        <input type="text" id="todo-input" placeholder="Create a new todo...">
+      </div>
+      <div class="container__section--todos">
+        <div class="todo-item">
+          <div class="list-circle">
+            <img src="images/icon-check.svg" class="d-none">
+          </div>
+          <p>Some To Do</p>
+          <div class="delete-x"></div>
+        </div>
+        <hr>
+      
+        <div class="todo-item todo-done">
+          <div class="list-circle">
+            <img src="images/icon-check.svg" class="d-inline-block">
+          </div>
+          <p>Another To Do, but done</p>
+          <div class="delete-x"></div>
+        </div>
+        <hr>
+        <!--todo desktop btn set footer-->
+        <div class="todo-item desktop-btns-footer">
+          <p>N items left</p>
+          <div class="desktop-filter-set">
+            <div class="active-filter">All</div>
+            <div>Active</div>
+            <div>Completed</div>
+          </div>
+          <p>Clear Completed</p>
+        </div>
+        
+      </div>
+      <!--end of container todos-->
+      
+      <!--Will pop up on mobile-->
+      <div class="mobile-filter-set todo-item flex-evenly border-radius">
+        <div class="active-filter">All</div>
+        <div>Active</div>
+        <div>Completed</div>
+      </div>
+    </section>
+    <p>Drag and drop to reorder list</p>
+  </main>  
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://joseriosdev.github.io/">joseriosdev</a> & <a href="https://jacksonzambrano.dev/">JacksonDuvan</a>.
   </div>
+
+  <script src="scripts/toggle.js"></script>
 </body>
 </html>
