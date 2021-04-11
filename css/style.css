@@ -81,6 +81,11 @@ hr{
   color: var(--blue-font-color) !important;
 }
 
+input[type="text"]{
+  font-size: 1.1rem;
+  color: var(--font-color);
+}
+
 .list-circle{
   position: absolute;
   top: 25%;
@@ -218,6 +223,10 @@ hr{
 
   .mobile-filter-set{
     display: none;
+  }
+
+  .bg-img{
+    background: url(../images/bg-desktop-light.jpg) no-repeat center center/cover;
   }
 
   .desktop-filter-set{
